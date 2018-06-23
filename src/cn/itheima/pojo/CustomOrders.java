@@ -1,0 +1,58 @@
+package cn.itheima.pojo;
+
+import java.util.Date;
+
+/**
+ * author: zzw5005
+ * date: 2018/6/22 21:09
+ */
+
+
+public class CustomOrders extends Orders {
+    private Integer id;
+    private String username;//用户姓名
+    private String sex;     //性别
+    private Date birthday;  //生日
+    private String address; //地址
+
+    @Override
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+}
