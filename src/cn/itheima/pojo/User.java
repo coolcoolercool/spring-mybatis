@@ -1,36 +1,23 @@
 package cn.itheima.pojo;
 
 import java.util.Date;
-import java.util.List;
-
-/**
- * author: zzw5005
- * date: 2018/6/20 19:33
- */
-
 
 public class User {
-    private int id;
-    private String username; //用户姓名
-    private String sex; //性别
-    private Date birthday; //生日
-    private String address; //地址
+    private Integer id;
 
-    private List<Orders> ordersList;
+    private String username;
 
-    public List<Orders> getOrdersList() {
-        return ordersList;
-    }
+    private Date birthday;
 
-    public void setOrdersList(List<Orders> ordersList) {
-        this.ordersList = ordersList;
-    }
+    private String sex;
 
-    public int getId() {
+    private String address;
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -39,15 +26,7 @@ public class User {
     }
 
     public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
+        this.username = username == null ? null : username.trim();
     }
 
     public Date getBirthday() {
@@ -58,11 +37,19 @@ public class User {
         this.birthday = birthday;
     }
 
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex == null ? null : sex.trim();
+    }
+
     public String getAddress() {
         return address;
     }
 
     public void setAddress(String address) {
-        this.address = address;
+        this.address = address == null ? null : address.trim();
     }
 }

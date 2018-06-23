@@ -2,12 +2,6 @@ package cn.itheima.pojo;
 
 import java.util.Date;
 
-/**
- * author: zzw5005
- * date: 2018/6/22 21:06
- */
-
-
 public class Orders {
     private Integer id;
 
@@ -15,11 +9,9 @@ public class Orders {
 
     private String number;
 
-    private Date createtimer;
+    private Date createtime;
 
     private String note;
-
-    private User user;
 
     public Integer getId() {
         return id;
@@ -42,15 +34,15 @@ public class Orders {
     }
 
     public void setNumber(String number) {
-        this.number = number;
+        this.number = number == null ? null : number.trim();
     }
 
-    public Date getCreatetimer() {
-        return createtimer;
+    public Date getCreatetime() {
+        return createtime;
     }
 
-    public void setCreatetimer(Date createtimer) {
-        this.createtimer = createtimer;
+    public void setCreatetime(Date createtime) {
+        this.createtime = createtime;
     }
 
     public String getNote() {
@@ -58,14 +50,6 @@ public class Orders {
     }
 
     public void setNote(String note) {
-        this.note = note;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
+        this.note = note == null ? null : note.trim();
     }
 }
